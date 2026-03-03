@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Laporan OOP Interaktif</title>
+<title>Laporan OOP Dart Interaktif</title>
 
 <style>
 body {
@@ -34,7 +34,7 @@ button:hover {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
@@ -46,7 +46,7 @@ button:hover {
     background-color: white;
     margin: 5% auto;
     padding: 20px;
-    width: 85%;
+    width: 90%;
     border-radius: 10px;
 }
 
@@ -61,16 +61,17 @@ button:hover {
 <body>
 
 <div class="header">
-    <h1>LAPORAN MATERI OOP DART - INTERAKTIF</h1>
-    <h3>NAMA: MUHAMMAD BAGAS PUTRA ANDEZA</h3>
-    <h3>NIM: 251410003</h3>
+    <h1>LAPORAN MATERI OBJECT ORIENTED PROGRAMMING (OOP) - DART</h1>
+    <h3>NAMA : MUHAMMAD BAGAS PUTRA ANDEZA</h3>
+    <h3>NIM  : 251410003</h3>
 </div>
 
 <p>
-Klik tombol di bawah ini untuk melihat dan menjalankan contoh program Dart secara langsung menggunakan DartPad.
+Klik tombol di bawah ini untuk membuka dan menjalankan contoh program OOP Dart secara langsung menggunakan 
+<strong>DartPad</strong>.
 </p>
 
-<button onclick="openModal()">Jalankan Contoh OOP Dart</button>
+<button onclick="openModal()">Jalankan Program OOP Dart</button>
 
 <!-- Modal -->
 <div id="dartModal" class="modal">
@@ -78,6 +79,7 @@ Klik tombol di bawah ini untuk melihat dan menjalankan contoh program Dart secar
         <span class="close" onclick="closeModal()">&times;</span>
         <h2>Contoh Program OOP Dart</h2>
 
+        <!-- GANTI LINK DI BAWAH DENGAN LINK EMBED DARTPAD KAMU -->
         <iframe 
             src="https://dartpad.dev/embed-dart.html"
             width="100%" 
@@ -85,12 +87,6 @@ Klik tombol di bawah ini untuk melihat dan menjalankan contoh program Dart secar
             frameborder="0">
         </iframe>
 
-        <p>
-            Atau lihat source code melalui GitHub Gist:
-            <a href="https://gist.github.com/USERNAME/GIST_ID" target="_blank">
-                Buka Gist
-            </a>
-        </p>
     </div>
 </div>
 
