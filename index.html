@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laporan OOP Interaktif</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 40px;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #34495e;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    width: 85%;
+    border-radius: 10px;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>LAPORAN MATERI OOP DART - INTERAKTIF</h1>
+    <h3>NAMA: MUHAMMAD BAGAS PUTRA ANDEZA</h3>
+    <h3>NIM: 251410003</h3>
+</div>
+
+<p>
+Klik tombol di bawah ini untuk melihat dan menjalankan contoh program Dart secara langsung menggunakan DartPad.
+</p>
+
+<button onclick="openModal()">Jalankan Contoh OOP Dart</button>
+
+<!-- Modal -->
+<div id="dartModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Contoh Program OOP Dart</h2>
+
+        <iframe 
+            src="https://dartpad.dev/embed-dart.html"
+            width="100%" 
+            height="500px"
+            frameborder="0">
+        </iframe>
+
+        <p>
+            Atau lihat source code melalui GitHub Gist:
+            <a href="https://gist.github.com/USERNAME/GIST_ID" target="_blank">
+                Buka Gist
+            </a>
+        </p>
+    </div>
+</div>
+
+<script>
+function openModal() {
+    document.getElementById("dartModal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("dartModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+    var modal = document.getElementById("dartModal");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
