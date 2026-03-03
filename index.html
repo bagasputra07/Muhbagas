@@ -1,40 +1,130 @@
-<div class="section box">
-    <h2>Contoh OOP Dart (Interaktif)</h2>
+DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laporan OOP Dart - Interaktif</title>
 
-    <p><strong>NAMA :</strong> Muhammad Bagas Putra Andeza</p>
-    <p><strong>NIM :</strong> 251410003</p>
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:40px;
+  background:#f4f6f9;
+}
 
-    <p>
-        Berikut adalah contoh implementasi Object Oriented Programming (OOP) 
-        menggunakan bahasa Dart yang dapat dijalankan secara langsung.
-    </p>
+h1{
+  color:#2c3e50;
+}
 
-    <br>
+.section{
+  background:white;
+  padding:25px;
+  border-radius:10px;
+  margin-bottom:30px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
 
-    <!-- Tombol ke Website Referensi -->
-    <a href="https://groamrup09.github.io/Tugas-baru-tgl-3-Azriel/" target="_blank">
-        <button>Lihat Contoh Versi Website Referensi</button>
-    </a>
+button{
+  padding:10px 18px;
+  background:#007bff;
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
 
-    <br><br>
+button:hover{
+  background:#0056b3;
+}
 
-    <!-- Tombol Buka DartPad -->
-    <button onclick="openModal()">Jalankan Contoh OOP di DartPad</button>
+/* MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.85);
+  z-index:9999;
+}
 
+.modal-content{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:95%;
+  max-width:1100px;
+  height:85%;
+  background:white;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.modal iframe{
+  width:100%;
+  height:100%;
+  border:none;
+}
+</style>
+</head>
+
+<body>
+
+<h1>LAPORAN OBJECT ORIENTED PROGRAMMING (OOP) - DART</h1>
+<p><b>Nama:</b> Muhammad Bagas Putra Andeza<br>
+<b>NIM:</b> 251410003</p>
+
+<div class="section">
+<h2>1. Class & Object (Car)</h2>
+<p>Contoh pembuatan class tanpa constructor.</p>
+<button onclick="openModal()">Lihat Source & Jalankan</button>
 </div>
 
-<!-- Modal DartPad -->
-<div id="dartModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2>Program OOP Dart</h2>
+<div class="section">
+<h2>2. Constructor</h2>
+<p>Constructor digunakan untuk inisialisasi atribut.</p>
+<button onclick="openModal()">Lihat Source & Jalankan</button>
+</div>
 
-        <iframe 
-            src="https://dartpad.dev/embed-dart.html"
-            width="100%" 
-            height="500px"
-            frameborder="0">
-        </iframe>
+<div class="section">
+<h2>3. Validasi Constructor (Mahasiswa)</h2>
+<button onclick="openModal()">Lihat Source & Jalankan</button>
+</div>
+
+<div class="section">
+<h2>4. Encapsulation (Person)</h2>
+<button onclick="openModal()">Lihat Source & Jalankan</button>
+</div>
+
+<div class="section">
+<h2>5. Named Parameter (Produk)</h2>
+<button onclick="openModal()">Lihat Source & Jalankan</button>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal" onclick="closeModal()">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <iframe id="dartFrame"></iframe>
+  </div>
+</div>
+
+<script>
+function openModal(){
+  document.getElementById("modal").style.display="block";
+  document.getElementById("dartFrame").src =
+  "https://dartpad.dev/embed-dart.html?id=bd3af42ea20c8e23cc0e63354048a81c";
+}
+
+function closeModal(){
+  document.getElementById("modal").style.display="none";
+  document.getElementById("dartFrame").src="";
+}
+</script>
+
+</body>
+</html>        </iframe>
 
     </div>
 </div>
